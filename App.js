@@ -4,15 +4,15 @@ import {
   View,
 } from 'react-native';
 
-//import MainServicesScreen from './src/components/MainServicesScreen'
-import ClientScreen from './src/components/ClientScreen';
+import MainServicesScreen from './src/components/MainServicesScreen'
+//import ClientScreen from './src/components/ClientScreen';
 
 export default class App extends React.Component {
   render() {
     return (
       <View>
-       {/* <MainServicesScreen/> */}
-       <ClientScreen/>
+        <MainServicesScreen/>
+       {/* <ClientScreen/> */}
       </View>
     );
   }

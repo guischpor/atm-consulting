@@ -8,6 +8,9 @@
       "ios",
       "android"
     ],
+    "androidStatusBar": {
+      "backgroundColor": "#4b66ea"
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

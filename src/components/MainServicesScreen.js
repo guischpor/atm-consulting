@@ -18,11 +18,6 @@ export default class MainServicesScreen extends React.Component {
     render() {
         return (
         <View>
-            <View style={styles.statusBar}></View>
-            <StatusBar
-                //hidden
-                backgroundColor='#CCC'
-            />
             <NavigationBar/>
 
             <View style={styles.logo}>
