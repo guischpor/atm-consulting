@@ -15,13 +15,16 @@ const clienteDois = require('../image/cliente2.png');
 export default class clientScreen extends React.Component {
     render() {
         return (
-        <View>
-            <View style={styles.statusBar}></View>
+        <View style={styles.viewContainer}>
             <StatusBar
                 //hidden
-                backgroundColor='#CCC'
+                backgroundColor="#B9C941"
+                barStyle="light-content"
             />
-            <NavigationBar/>
+            <NavigationBar
+                voltar
+                navigator={this.props.navigator}
+            />
 
             <View style={styles.cabecalho}>
                 <Image source={detalheCliente}/>
@@ -44,31 +47,30 @@ export default class clientScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    statusBar:{
-        backgroundColor: '#B9C941',
-        padding: 10,
-        height: 24,
-    },
-
-    cabecalho:{
+    cabecalho: {
         flexDirection: 'row',
         marginTop: 20,
     },
 
-    txtTitle:{
+    txtTitle: {
         fontSize: 30,
         color: '#B9C941',
         marginLeft: 10,
         marginTop: 25,
     },
 
-    detalheCliente:{
+    detalheCliente: {
         padding: 20,
         marginTop: 10
     },
 
-    txtDetalhes:{
+    txtDetalhes: {
         fontSize: 18,
         marginLeft: 20
+    },
+
+    viewContainer: {
+        backgroundColor: 'white',
+        flex: 1
     }
 });

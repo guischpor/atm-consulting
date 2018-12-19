@@ -3,7 +3,8 @@ import { StyleSheet,
     Text,
     View,
     StatusBar,
-    Image
+    Image,
+    TouchableHighlight
 } from 'react-native';
 
 import NavigationBar from './NavigationBar'
@@ -18,6 +19,11 @@ export default class MainServicesScreen extends React.Component {
     render() {
         return (
         <View>
+            <StatusBar
+                //hidden
+                backgroundColor='#CCC'
+                barStyle="light-content"
+            />
             <NavigationBar/>
 
             <View style={styles.logo}>
@@ -27,7 +33,15 @@ export default class MainServicesScreen extends React.Component {
             <View style={styles.menu}>
 
                 <View style={styles.menuGrupo}>
-                    <Image style={styles.imgMenu} source={menuCliente}/>
+
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.props.navigator.push({ id: 'b' });
+                        }}
+                    >
+                        <Image style={styles.imgMenu} source={menuCliente}/>
+                    </TouchableHighlight>
+
                     <Image style={styles.imgMenu} source={menuContato}/>
                 </View>
 
@@ -38,7 +52,6 @@ export default class MainServicesScreen extends React.Component {
 
             </View>
 
-           
         </View>
         );
     }
