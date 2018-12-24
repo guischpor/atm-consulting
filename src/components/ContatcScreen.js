@@ -8,38 +8,32 @@ import { StyleSheet,
 
 import NavigationBar from './NavigationBar'
 
-const detalheCliente = require('../image/detalhe_cliente.png');
-const clienteUm = require('../image/cliente1.png');
-const clienteDois = require('../image/cliente2.png');
+const detalheContato = require('../image/detalhe_contato.png');
 
-export default class clientScreen extends React.Component {
+export default class ContactScreen extends React.Component {
     render() {
         return (
         <View style={styles.viewContainer}>
             <StatusBar
                 //hidden
-                backgroundColor="#B9C941"
+                backgroundColor="#61BD8C"
                 barStyle="light-content"
             />
             <NavigationBar
                 voltar
                 navigator={this.props.navigator}
-                corDeFundo="#B9C941"
+                corDeFundo="#61BD8C"
             />
 
             <View style={styles.cabecalho}>
-                <Image source={detalheCliente}/>
-                <Text style={styles.txtTitle} >Nossos Clientes</Text>
+                <Image source={detalheContato}/>
+                <Text style={styles.txtTitle} >Contatos</Text>
             </View>
 
-            <View style={styles.detalheCliente}>
-                <Image source={clienteUm}/>
-                <Text style={styles.txtDetalhes}>Lorem ipsum dolorem</Text>
-            </View>
-
-            <View style={styles.detalheCliente}>
-                <Image source={clienteDois}/>
-                <Text style={styles.txtDetalhes}>Lorem ipsum dolorem</Text>
+            <View style={styles.detalheContato}>
+                <Text style={styles.txtDetalhes}>CEL: (41) 99852-1111</Text>
+                <Text style={styles.txtDetalhes}>TEL: (41) 3030-1214</Text>
+                <Text style={styles.txtDetalhes}>EMAIL: atm@consultoria.com</Text>
             </View>
 
         </View>
@@ -55,19 +49,20 @@ const styles = StyleSheet.create({
 
     txtTitle: {
         fontSize: 30,
-        color: '#B9C941',
+        color: "#61BD8C",
         marginLeft: 10,
         marginTop: 25,
     },
 
-    detalheCliente: {
+    detalheContato: {
         padding: 20,
-        marginTop: 10
+        marginTop: 20
     },
 
-    txtDetalhes: {
+    txtDetalhes:{
         fontSize: 18,
-        marginLeft: 20
+        fontWeight: 'bold',
+        color: 'grey'
     },
 
     viewContainer: {

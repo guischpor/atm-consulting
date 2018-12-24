@@ -13,8 +13,10 @@ export default class NavigationBar extends React.Component {
 
         if (this.props.voltar) {
             return (
-                <View style={styles.barraTitulo}>
+                <View style={[styles.barraTitulo, {backgroundColor: this.props.corDeFundo}]}>
                     <TouchableHighlight
+                        underlayColor={this.props.corDeFundo}
+                        activeOpacity={0.3}
                         onPress= {() => {
                             this.props.navigator.pop()
                         }}
@@ -36,7 +38,7 @@ export default class NavigationBar extends React.Component {
 
 const styles = StyleSheet.create({
     barraTitulo:{
-        backgroundColor: '#CCC',
+        backgroundColor: '#00B0FF',
         padding: 10,
         height: 60,
         flexDirection: 'row',
